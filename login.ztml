@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>ZPanel - Taking hosting to the next level!</title>
+		<link rel="icon" type="image/png" href="etc/styles/CstyleXv2/images/favicon.png">
+		<link href="etc/styles/CstyleXv2/inc/login.css" rel="stylesheet" type="text/css">
+		
+		<!-- JQUERY NAVBAR REQUIREMENTS -->
+		<script type="text/javascript" src="etc/styles/CstyleXv2/inc/jquery.min.js" language="javascript"></script>	
+		<!-- END JQUERY NAVBAR REQUIREMENTS -->
+		
+		<!-- Anti ClickJacking protection! -->
+		<style id="antiClickjack">body{display:none !important;}</style>
+		<script type="text/javascript">
+			if (self === top) {
+				var antiClickjack = document.getElementById("antiClickjack");
+				antiClickjack.parentNode.removeChild(antiClickjack);
+			} else {
+				top.location = self.location;
+			}
+		</script>
+		<!-- End of Anti ClickJacking protection! -->
+		
+		
+		<script language="JavaScript" type="text/javascript">
+			$(document).ready(function(){
+				$('#zlogin_notifybox').delay(5000).fadeOut('slow');
+			});
+		</script>
+		
+		<!-- stupid IE fixes... IE sucks!! -->
+		<!--[if  ie 8]>
+		<style type="text/css" media="screen">
+			#inUsername, #inPassword, #inForgotPassword, #inConfEmail, #inNewPass, #inNewPass2 {
+				line-height: 35px;
+			}
+		</style>
+		<![endif]-->
+		<!--[if  ie 9]>
+		<style type="text/css" media="screen">
+			#zlogin_header{
+				filter: none;
+			}
+		</style>
+		<![endif]-->
+		
+	</head>
+	<body>
+		<div id="zlogin_spacer">
+			<div style="height: 90px;"></div>
+			<?php
+			if (isset($_GET['invalidlogin'])) {
+				//echo "Invalid user account or username/password mismatch, please try again!";
+				echo '<div id="zlogin_notifybox">Invalid user account or username/password mismatch, please try again!</div>';
+			}
+			if (isset($_GET['loggedout'])) {
+				//echo "You have been logged out successfully!";
+				echo '<div id="zlogin_notifybox">You have been logged out successfully!</div>';
+			}
+			if(isset($_GET['sessionIssue'])){
+				//echo 'ZPanel has detected an issue please login again!';
+				echo '<div id="zlogin_notifybox">ZPanel has detected an issue please login again!</div>';
+			}
+			if (isset($_GET['passwordreset'])) {
+				//echo "If your email address matched the one on your account your password has now been reset!";
+				echo '<div id="zlogin_notifybox">If your email address matched the one on your account your password has now been reset!</div>';
+			}
+			?>
+		</div>
+		<div id="zlogin_wrapper">
+			<div id="zlogin_header"><a href="./"><img src="etc/styles/CstyleXv2/images/login_zpanel_logo.png" width="216" height="70" /></a></div>
+			<div id="zlogin_box">
+			<?php if (isset($_GET['resetkey'])) { ?>
+				<!-- BEGIN CONFIRMATION-->
+				<div class="confirmation_wrapper" id="confirmation_wrapper" style="display:block;">
+					<form action="<?php echo $_SERVER['PHP_SELF']; ?>?resetkey=<?php echo $_GET['resetkey']; ?>" method="post" name="frmZConfirm" id="frmZConfirm">
+						<table>
+							<tr>
+								<td height="20" colspan="2">Reset Password</td>
+							</tr>
+							<tr>
+							<td height="20" colspan="2" style="font-weight: normal;">
+								<p>Your nearly there! </p>
+								<p>To reset your account password, </p>
+								<p>please enter your new password and </p>
+								<p>confirm your email address to proceed.</p></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20" colspan="2">E-mail:</td>
+							</tr>
+							<tr>
+								<td height="30" colspan="2"><input name="inConfEmail" type="text" id="inConfEmail"  tabindex="3" /></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20" colspan="2">New Password:</td>
+							</tr>
+							<tr>
+								<td height="30" colspan="2"><input name="inNewPass" id="inNewPass" type="password" tabindex="1" /></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20" colspan="2">Re-type new password:</td>
+							</tr>
+							<tr>
+								<td height="30" colspan="2"><input name="inNewPass2" id="inNewPass2" type="password" tabindex="2" /></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20"><button type="submit" id="button" name="Confirm" value="1"  tabindex="4">Submit</button></td>
+								<td height="20"></td>
+							</tr>
+						</table>
+						<?php echo runtime_csfr::Token(); ?>
+					</form>
+					<p>&nbsp;</p>
+				</div> 
+			<!-- END CONFIRMATION- -->
+			<?php } else { ?>
+			<!-- BEGIN LOGIN -->
+				<div class="login_wrapper" id="login_wrapper" style="display:block;">
+					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="frmZLogin" id="frmZLogin">
+						<table>
+							<tr>
+								<td height="20" colspan="2">Username:</td>
+							</tr>
+							<tr>
+								<td height="30" colspan="2"><input name="inUsername" type="text" id="inUsername" maxlength="20" /></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20" colspan="2">Password:</td>
+							</tr>
+							<tr>
+								<td height="30" colspan="2"><input name="inPassword" type="password" id="inPassword" /></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td colspan="2" height="20" style="text-align: right; font-size: 12px"><input name="inRemember" id="inRemember" type="checkbox" value="1" /> Remember Me</td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20"><button type="submit" id="button" name="sublogin2" value="LogIn">Login</button></td>
+								<td height="20"><a href="javascript:void(0);" id="fp" style="float: right; font-size: 12px; color: #333; text-decoration: none; text-align: right;" onclick="toggleVisibility('forgotpassword_wrapper', 'login_wrapper');">Forgot Password?</a></td>
+							</tr>
+						</table>
+						<?php echo runtime_csfr::Token(); ?>
+					</form>
+					<p>&nbsp;</p>
+				</div>
+				<!-- END LOGIN -->
+				<!-- BEGIN FORGOT PASSWORD-->
+				<div class="forgotpassword_wrapper" id="forgotpassword_wrapper" style="display:none;">
+					<form action="" method="post" name="frmZForgot" id="frmZForgot">
+						<table>
+							<tr>
+								<td height="20" colspan="2">Forgot your password?</td>
+							</tr>
+							<tr>
+								<td height="20" colspan="2" style="font-weight: normal;">Please enter your email address.</td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20" colspan="2">E-mail:</td>
+							</tr>
+							<tr>
+								<td height="30" colspan="2"><input name="inForgotPassword" type="text" id="inForgotPassword" /></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="2"></td>
+							</tr>
+							<tr>
+								<td height="20"><button type="submit" id="button" name="sublogin2" value="LogIn">Login</button></td>
+								<td height="20" style="text-align: right;"><a href="javascript:void(0);" id="btl" style="float: right; font-size: 12px; color: #333; text-decoration: none; text-align: right;" onclick="toggleVisibility('forgotpassword_wrapper', 'login_wrapper');">Back to Login</a></td>
+							</tr>
+						</table>
+						<?php echo runtime_csfr::Token(); ?>
+					</form>
+					<p>&nbsp;</p>
+				</div>
+				<!-- END FORGOT PASSWORD- -->
+			<?php } ?>				 
+			</div>
+		</div>
+		<div id="copy">Copyright &copy; 2004-<?php echo date('Y'); ?> <a href="http://www.zpanelcp.com/" target="_blank">ZPanel</a> - CstyleXv2 theme by <a href="http://www.auxio.nl/" target="_blank">Auxio</a></div>
+		<!-- Please do not modify the Copyright, thank you . For more information please check: http://forums.zpanelcp.com/thread-6010.html -->
+	</body>
+</html>
+<script language="javascript">
+    document.frmZLogin.inUsername.focus();
+</script>
+<script language="JavaScript" type="text/javascript">
+    <!--
+    function toggleVisibility(sId, lId){
+        var me=document.getElementById(sId);
+        var le=document.getElementById(lId);
+        if (me.style.display=="none"){
+            me.style.display="block";
+        }
+        else {
+            me.style.display="none";
+        }
+        if (le.style.display=="block"){
+            le.style.display="none";
+        }
+        else {
+            le.style.display="block";
+        }
+    }
+    // -->
+</script>

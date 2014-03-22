@@ -1,0 +1,37 @@
+@import url("default.css");
+
+body {
+	background-repeat: repeat-x;
+	background-color: #260000;
+}
+
+#header {
+	background-image: url('../images/tred_header_bg.png'); /* image of http://www.vectoropenstock.com/4546-Red-Technology-Background-vector used, has Creative Commons Attribution 3.0 Unported License */
+}
+
+#sub table tr th {
+	background-image: none;
+	background-color: #DF0000;
+}
+
+.module-box-title{
+	background-image: none;
+	background-color: #DF0000;
+}
+#footer {
+	background-image: none;
+	background-color: #DF0000;
+}
+
+#copy ,#copy a{
+	color: #CCC;
+}
+
+/** JQUERY UI TABS BACKGROUND **/
+.ui-tabs .ui-tabs-panel {
+    background-color: #F1F4F6;
+}
+.ui-tabs {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

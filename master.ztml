@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>ZPanel &gt; <# ui_tpl_username #> - <# ui_tpl_domainname #></title>
+		<link rel="icon" type="image/png" href="<# ui_tpl_assetfolderpath #>images/favicon.png">
+		<link href="<# ui_tpl_csspath #>" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="<# ui_tpl_assetfolderpath #>inc/jquery.min.js" language="javascript"></script>
+		<script type="text/javascript" src="<# ui_tpl_assetfolderpath #>inc/jquery-ui.js" language="javascript"></script>
+		<script type="text/javascript" src="<# ui_tpl_assetfolderpath #>inc/jquery.cookie.js" language="javascript"></script>
+		<script type="text/javascript" src="<# ui_tpl_assetfolderpath #>inc/init.js" language="javascript"></script>
+		<script type="text/javascript" src="<# ui_tpl_assetfolderpath #>inc/jquery_jclock-1_2_0_js.txt" language="javascript"></script>
+		
+		<!-- TOOL TIPS (Styles title="" in links into nice boxes) -->
+		<script type="text/javascript" src="<# ui_tpl_assetfolderpath #>inc/jquery.qtip.min.js" language="javascript"></script>
+		<link href="<# ui_tpl_assetfolderpath #>inc/jquery.qtip.min.css" rel="stylesheet" type="text/css">
+		<!-- END TOOL TIPS -->
+
+		<!-- ZLOADER ANIMATION FIX FOR IE (I use JQuery to call this in init.js)-->
+		<script languag='javascript'> 
+			function showDiv(){ 
+				//document.getElementById('myHiddeDiv').style.display =""; 
+				document.getElementById('zloader_image').src = "<# ui_tpl_assetfolderpath #>images/loading.gif";
+			} 
+		</script> 
+		<!-- END ZLOADER ANIMATION FIX FOR IE -->
+
+		<!-- Anti ClickJacking protection! -->
+		<style id="antiClickjack">body{display:none !important;}</style>
+		<script type="text/javascript">
+			if (self === top) {
+				var antiClickjack = document.getElementById("antiClickjack");
+				antiClickjack.parentNode.removeChild(antiClickjack);
+			} else {
+				top.location = self.location;
+			}
+		</script>
+		<!-- End of Anti ClickJacking protection! -->
+		
+		<!-- CstyleX theme javascript -->
+		<script type="text/javascript">
+			/* check is GET is used for detection of mudule */
+			var vars = [], hash;
+				var q = document.URL.split('?')[1];
+				if(q != undefined){
+					q = q.split('&');
+					for(var i = 0; i < q.length; i++){
+						hash = q[i].split('=');
+						vars.push(hash[1]);
+						vars[hash[0]] = hash[1];
+					}
+			}
+			/* check is module is used */
+			if(vars['module']){
+				$(document).ready(function(){
+					/* Qtip http://craigsworks.com/projects/qtip/ */
+					$('a[title]').qtip();
+					/* hide sidebar #sub div*/
+					$('#sub').hide();
+					$("#maincontent").css({
+						"width": "735px",
+						"float": "left",
+						"margin-left": "13px",
+						"margin-bottom": "13px"
+					});
+					$(".zmodule_header").css({
+						"border-bottom-width": "0px"
+					});
+					$(".zmodule_content").css({
+						"background-color": "none"
+					});
+				});
+			/* else is no mudule is used */	
+			}else{
+				$(document).ready(function() {
+					/* Qtip http://craigsworks.com/projects/qtip/ */
+					$('a[title]').qtip();
+				});					
+			}
+		</script>
+		<!-- End of CstyleX theme javascript -->
+	</head>
+	<body>
+		<!-- BEGIN ZLOADER PROGRESSBAR DIV -->
+        <div class="zloader_overlay" id="zloader_overlay" style="display:none;"></div>
+        <div class="zloader" id="zloader" style="display:none;">
+            <div class="zloader_content" id="zloader_content">
+                <img src="<# ui_tpl_assetfolderpath #>images/loading.gif" id="zloader_image" alt="Loading...">
+            </div>
+        </div>
+        <!-- END ZLOADER PROGRESSBAR DIV -->
+		<div id="wrapper">
+			<div id="inner-wrapper">
+				<div id="header">
+					<div id="home_btn"><a href="./index.php" title="Home"></a></div>
+					<div id="logout_btn"><a href="./?logout" title="Log out"></a></div>
+					<div id="myaccount_btn"><a href="./?module=my_account" title="My account"></a></div>
+					<div id="logo"></div>
+				</div>
+				<# ui_tpl_notice #>
+				<# ui_tpl_shadowbar #>
+				<div id="sub">
+					<table border="0" id="tablestyle1">
+						<tr>
+							<th width="174">Notices</th>
+						</tr>
+						<tr>
+							<td><a href="./index.php" target="_blank" title="Homepage">Homepage</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://zpanelcp.com/" target="_blank" title="ZpanelX">Zpanel</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://forums.zpanelcp.com/" target="_blank" title="Zpanel Forum">Foum</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://docs.zpanelcp.com/" target="_blank" title="Zpanel documentation">Documentation</a></td>
+						</tr>
+					</table>
+					<table border="0" id="tablestyle2">
+						<tr>
+							<th colspan="2"><: Account Information :></th>
+						</tr>
+						<tr>
+							<td width="80"><: Username :></td>
+							<td width="129" style="color: #000; font-weight: bold;"><# ui_tpl_username #></td>
+						</tr>
+						<tr>
+							<td width="80"><: Full name :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_fullname #></span></td>
+						</tr>
+						<tr>
+							<td width="80"><: Email Address :></td>
+							<td width="129"><span style="color: #000;"><a href="./?module=my_account" title="<: Update your contact email address :>"><# ui_tpl_email #></a></span></td>
+						</tr>
+						<tr>
+							<td width="80"><: Package name :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_packagename #></span></td>
+						</tr>
+						<tr>
+							<td width="80"><: Account type :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_usergroup #></span></td>
+						</tr>
+						<tr>
+							<td width="80"><: Last Logon :></td>
+							<td width="129"><span style="color: #000;font-size:9px"><# ui_tpl_lastlogon #></span></td>
+						</tr>
+						<tr>
+							<td width="80"><: Disk Quota :></td>
+							<td width="129">
+								<p><# ui_tpl_progbardisk #></p>
+								<p><img src="<# ui_tpl_assetfolderpath #>images/drop.gif" width="10" height="10" /><span style="color: #000;"><# ui_tpl_usagediskspace #> / <# ui_tpl_quotadiskspace #></span></p>
+							</td>
+						</tr>
+						<tr>
+							<td width="80"><: Bandwidth Quota :></td>
+							<td width="129">
+								<p><# ui_tpl_progbarbandwidth #></p>
+								<p><img src="<# ui_tpl_assetfolderpath #>images/drop.gif" width="10" height="10" /><span style="color: #000;"> <# ui_tpl_usagebandwidth #> / <# ui_tpl_quotabandwidth #></p>
+							</td>
+						</tr>
+						<tr>
+							<td width="80"><: Domains :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_useddomains #> / <# ui_tpl_totaldomains #></p></td>
+						</tr>
+						<tr>
+							<td width="80"><: Sub-domains :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_usedsubdomains #> / <# ui_tpl_totalsubdomains #></p></td>
+						</tr>
+						<tr>
+							<td width="80"><: Parked domains :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_usedparkeddomains #> / <# ui_tpl_totalparkeddomains #></p></td>
+						</tr>
+						<tr>
+							<td width="80"><: FTP accounts :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_usedftp #> / <# ui_tpl_totalftp #></p></td>
+						</tr>
+						<tr>
+							<td width="80"><: MySQL&reg; databases :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_usedmysql #> / <# ui_tpl_totalmysql #></p></td>
+						</tr>
+						<tr>
+							<td width="80"><: Email Accounts :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_usedemail #> / <# ui_tpl_totalemail #></p></td>
+						</tr>
+						<tr>
+							<td width="80"><: Email Forwarders :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_usedforwarders #> / <# ui_tpl_totalforwarders #></p></td>
+						</tr>
+						<tr>
+							<td width="80"><: Distribution lists :></td>
+							<td width="129"><span style="color: #000;"><# ui_tpl_useddistlists #> / <# ui_tpl_totaldistlists #></p></td>
+						</tr>
+					</table>
+					<table border="0" id="tablestyle2">
+						<tr>
+							<th colspan="2"><: Server Information :></th>
+						</tr>
+						<tr>
+							<td width="80"><: Your IP :></td>
+							<td width="129" style="color: #000;"><# ui_tpl_clientipaddress #></td>
+						</tr>
+						<tr>
+							<td width="80"><: Server IP :></td>
+							<td width="129" style="color: #000;"><# ui_tpl_serveripaddress #></td>
+						</tr>
+						<tr>
+							<td width="80"><: Server OS :></td>
+							<td width="129" style="color: #000;"><img src="<# ui_tpl_assetfolderpath #>images/os_icons/<# ui_tpl_serverosname #>.png" width="16" height="16" /><# ui_tpl_serverosname #></td>
+						</tr>
+						<tr>
+							<td width="80"><: Apache Version :></td>
+							<td width="129" style="color: #000;"><# ui_tpl_apacheversion #></td>
+						</tr>
+						<tr>
+							<td width="80"><: PHP Version :></td>
+							<td width="129" style="color: #000;"><# ui_tpl_phpversion #></td>
+						</tr>
+						<tr>
+							<td width="80"><: MySQL Version :></td>
+							<td width="129" style="color: #000;"><# ui_tpl_mysqlversion #></td>
+						</tr>
+						<tr>
+							<td width="80"><: ZPanel Version :></td>
+							<td width="129" style="color: #000;"><# ui_tpl_zpanelversion #></td>
+						</tr>
+						<tr>
+							<td width="80"><: Server uptime :></td>
+							<td width="129" style="color: #000;font-size:9px;"><# ui_tpl_serveruptime #></td>
+						</tr>
+						<tr>
+							<td width="80"><: Server time :></td>
+							<td width="129" style="color: #000;font-size:9px;"><div id="jclock" class="jclock"></div></td>
+						</tr>
+						<tr>
+							<td width="80"><: Server date :></td>
+							<td width="129" style="color: #000;font-size:9px;"><# ui_tpl_date #></td>
+						</tr>
+					</table>
+					
+				</div>
+				<div id="maincontent">
+					<# ui_tpl_modulelist2column #>
+					<# ui_tpl_module #>
+				</div>
+				<div id="footer"><a href="./index.php" title="<: Home :>"><: Home :></a> &bull; <a href="http://www.zpanelcp.com/" target="_blank">ZPanelX</a> &bull; <a href="http://forums.zpanelcp.com/" target="_blank">Forum</a> &bull; <a href="http://docs.zpanelcp.com/" target="_blank">documentation</a></div>
+			</div>
+		</div>
+		<div id="copy">Copyright &copy; 2004-<# ui_tpl_year #> <a href="http://www.zpanelcp.com/" target="_blank">ZPanel</a> v<# ui_tpl_zpanelversion #> - CstyleXv2 theme by <a href="http://www.auxio.nl/" target="_blank">Auxio</a></div>
+		<!-- Please do not modify the Copyright, thank you . For more information please check: http://forums.zpanelcp.com/thread-6010.html -->
+		<# ui_controllerdebug #>
+	</body>
+</html>

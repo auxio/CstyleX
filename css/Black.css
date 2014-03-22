@@ -1,0 +1,39 @@
+@import url("default.css");
+
+body {
+	/*background-image: url('../images/bg.png');*/
+	background-repeat: repeat-x;
+	background-color: #000;
+}
+
+#header {
+	background-image: url('../images/tblack_header_bg.png'); /* image of http://www.vectoropenstock.com/4348-Futuristic-banner-vector used, has Creative Commons Attribution 3.0 Unported License */
+}
+
+#sub table tr th {
+	border-bottom-color: #CCC;
+	background-image: url('../images/tblack_block-bg.png');
+	background-repeat: repeat-x;
+}
+
+.module-box-title{
+	border-bottom-color: #CCC;
+	background-image: url('../images/tblack_block-bg.png');
+	background-repeat: repeat-x;
+}
+#footer {
+	background-image: url('../images/tblack_block-bg.png');
+}
+
+#copy ,#copy a{
+	color: #CCC;
+}
+
+/** JQUERY UI TABS BACKGROUND **/
+.ui-tabs .ui-tabs-panel {
+    background-color: #F1F4F6;
+}
+.ui-tabs {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

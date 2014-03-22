@@ -1,0 +1,259 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset */
+body {
+	background: #CECECE;
+	background-image: linear-gradient(left top, #A1A1A1 24%, #CECECE 96%);
+	background-image: -o-linear-gradient(left top, #A1A1A1 24%, #CECECE 96%);
+	background-image: -moz-linear-gradient(left top, #A1A1A1 24%, #CECECE 96%);
+	background-image: -webkit-linear-gradient(left top, #A1A1A1 24%, #CECECE 96%);
+	background-image: -ms-linear-gradient(left top, #A1A1A1 24%, #CECECE 96%);
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		color-stop(0.25, #A1A1A1),
+		color-stop(0.95, #D1D1D1)
+	);
+	font-family: Arial, Helvetica, sans-serif;
+}
+#zlogin_spacer {
+	height: 160px;
+}
+#zlogin_notifybox {
+	min-height: 20px;
+	width: 340px;
+	margin-right: auto;
+	margin-left: auto;
+	background: #C42729;
+	border: 1px solid #666;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 8px 12px -3px #3A3B3D;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #FFF;
+	
+}
+
+#zlogin_wrapper {
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: 0 8px 12px -3px #3A3B3D;
+	border: 1px solid #666;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+}
+#zlogin_header {
+	height: 80px;
+	width: 350px;
+	background: #e5e5e5;
+	background: -moz-linear-gradient(top,#e5e5e5 0,#d4d4d4 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#e5e5e5),color-stop(100%,#d4d4d4));
+	background: -webkit-linear-gradient(top,#e5e5e5 0,#d4d4d4 100%);
+	background: -o-linear-gradient(top,#e5e5e5 0,#d4d4d4 100%);
+	background: -ms-linear-gradient(top,#e5e5e5 0,#d4d4d4 100%);
+	background: linear-gradient(to bottom,#e5e5e5 0,#d4d4d4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5',endColorstr='#D4D4D4',GradientType=0);						
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a1a1a1;
+	border-bottom-width: 1px;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 5px 5px 0px 0px !important;
+	-moz-border-radius: 5px 5px 0px 0px !important;
+	-webkit-border-radius: 5px 5px 0px 0px !important;
+	-khtml-border-radius: 5px 5px 0px 0px !important;
+}
+#zlogin_box {
+	width: 350px;
+	background-color: #eaeaea;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-khtml-border-radius: 0 0 5px 5px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+}
+#login_wrapper table {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#login_wrapper table tr td {
+	vertical-align: text-bottom;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+#inUsername {
+	border: 2px solid #bebebe;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	height: 30px;
+	padding-left: 30px;
+	width: 245px;background-image: url(../images/login_icon_name.png);
+	background-repeat: no-repeat;
+	background-position: 10px 9px;
+}
+#inPassword {
+	border: 2px solid #bebebe;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	height: 30px;
+	padding-left: 30px;
+	width: 245px;background-image: url(../images/login_icon_pass.png);
+	background-repeat: no-repeat;
+	background-position: 10px 9px;
+}
+
+#forgotpassword_wrapper table {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#forgotpassword_wrapper table tr td {
+	vertical-align: text-bottom;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+#inForgotPassword {
+	border: 2px solid #bebebe;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	height: 30px;
+	padding-left: 30px;
+	width: 245px;
+	background-image: url(../images/login_icon_email.png);
+	background-repeat: no-repeat;
+	background-position: 10px 9px;
+}
+#confirmation_wrapper table {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#confirmation_wrapper table tr td {
+	vertical-align: text-bottom;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+#inConfEmail {
+	border: 2px solid #bebebe;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	height: 30px;
+	padding-left: 30px;
+	width: 245px;
+	background-image: url(../images/login_icon_email.png);
+	background-repeat: no-repeat;
+	background-position: 10px 9px;
+}
+#inNewPass {
+	border: 2px solid #bebebe;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	height: 30px;
+	padding-left: 30px;
+	width: 245px;background-image: url(../images/login_icon_pass.png);
+	background-repeat: no-repeat;
+	background-position: 10px 9px;
+}
+#inNewPass2 {
+	border: 2px solid #bebebe;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	height: 30px;
+	padding-left: 30px;
+	width: 245px;background-image: url(../images/login_icon_pass.png);
+	background-repeat: no-repeat;
+	background-position: 10px 9px;
+}
+#button {
+	width: 130px;
+	height: 25px;
+}
+#copy {
+	float: none;
+	height: 15px;
+	width: 771px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	font-size: 10px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+#copy a {
+	color: #000;
+	text-decoration: underline;
+}
