@@ -1,0 +1,38 @@
+The CstyleXv2 theme relies on standard coding of modules, if this is not done right we need to add a fix.
+If the module does not fit in the narrow style theme we also need to add a fix.
+In case of the dns manager rewrite it has more to do with the forced bootstrap framework.
+Zpanel 10.1.1 update!
+
+
+phpinfo:
+edit line 18 in module.zpm
+	<div class="zform_wrapper" style="width:100%">
+to
+	<div class="zform_wrapper" style="width:690px">
+
+
+dns_manager:
+I had to rewrite the front-end of the module.
+Some of the back-end will still be done by the origional dns_manager module, so please leave it installed.
+The frond-end of dns_manager for CstyleXv2 is called cdns_manager and can be download at: https://www.dropbox.com/sh/as9zz710j96omns/X87PI8QSbP/ZpanelX/Themes/CstyleXv2/Module%20Fixes/cdns_manager.zpp 
+(If this url issent valid anymore check: https://www.dropbox.com/sh/as9zz710j96omns/T--VL0FB7j/ZpanelX/Themes/CstyleXv2 )
+Install instructions:
+1) Install the cdns_manager module side by side with the dns_manager module.
+2) Enabled them both in 'module admin'.
+3) Uncheck all the group boxes for dns_manager. (by hovering over the module name you can see which is which.)
+4) Check all required group boxes for cdns_manager.
+##### NOTICE: if you have the old cdns_manager installed, please do rename or remove the hooks directory inside ( /etc/zpanel/panel/modules/cdns_manager/hooks/ ) #####
+
+	
+client_notices:
+edit line 19 in module.zpm
+	<td><textarea name="inNotice" id="inNotice" rows="3" cols="80" /><@ CurrentNoticeText @></textarea></td>
+to
+	<td><textarea name="inNotice" id="inNotice" rows="3" cols="65" /><@ CurrentNoticeText @></textarea></td>
+	
+	
+dns_admin:
+edit line 250 in code/controller.ext.php
+	$line .= "</div>";
+to
+	//$line .= "</div>";
