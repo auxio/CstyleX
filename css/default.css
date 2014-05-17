@@ -290,7 +290,7 @@ body {
 }
 /* need to edit default ZpanelX code */
 .zmodule_desc {
-	margin: 10px;	
+	margin: 15px 0 10px 0;	
 }
 .zform_wrapper{
 	background-color: #f3f3f3;
@@ -767,4 +767,50 @@ table th,td{
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+
+.breadcrumb > li {
+	display: inline-block;
+}
+
+.breadcrumb > li:after {
+	display: inline-block;
+	padding: 0 5px;
+	color: #ccc;
+	content: "\00a0 /";
+}
+
+.breadcrumb > li:last-child:after {
+	content: "";
+}
+
+.breadcrumb {
+	padding-bottom: 10px;
+	list-style: none;
+	font-size: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #f3f3f3;
+	border: 1px solid #CCC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 15px;
+	padding-left: 20px;
+	margin-right: 5px;
+	margin-bottom: 12px;
+	line-height: 20px;
+}
+
+.panel-heading img{
+	float: left;
+	height: 35px;
+	width: 35px;
+}
+.panel-heading .zmodule_title {
+	font-size: 14px;
+	font-weight: bold;
+	/*font-family: Verdana, Geneva, sans-serif;*/
+	height: 35px;
+	line-height: 35px;
+	padding-left: 50px;
 }

@@ -241,6 +241,7 @@
 					
 				</div>
 				<div id="maincontent">
+					<# ui_tpl_breadcrumbs #>
 					<# ui_tpl_modulelist2column #>
 					<# ui_tpl_module #>
 				</div>
