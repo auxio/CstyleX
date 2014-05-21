@@ -112,7 +112,7 @@
 							<td><a href="http://zpanelcp.com/" target="_blank" title="ZpanelX">Zpanel</a></td>
 						</tr>
 						<tr>
-							<td><a href="http://forums.zpanelcp.com/" target="_blank" title="Zpanel Forum">Foum</a></td>
+							<td><a href="http://forums.zpanelcp.com/" target="_blank" title="Zpanel Forums">Forums</a></td>
 						</tr>
 						<tr>
 							<td><a href="http://docs.zpanelcp.com/" target="_blank" title="Zpanel documentation">Documentation</a></td>
@@ -245,7 +245,7 @@
 					<# ui_tpl_modulelist2column #>
 					<# ui_tpl_module #>
 				</div>
-				<div id="footer"><a href="./index.php" title="<: Home :>"><: Home :></a> &bull; <a href="http://www.zpanelcp.com/" target="_blank">ZPanelX</a> &bull; <a href="http://forums.zpanelcp.com/" target="_blank">Forum</a> &bull; <a href="http://docs.zpanelcp.com/" target="_blank">documentation</a></div>
+				<div id="footer"><a href="./index.php" title="<: Home :>"><: Home :></a> &bull; <a href="http://www.zpanelcp.com/" target="_blank">ZPanelX</a> &bull; <a href="http://forums.zpanelcp.com/" target="_blank">Forums</a> &bull; <a href="http://docs.zpanelcp.com/" target="_blank">documentation</a></div>
 			</div>
 		</div>
 		<div id="copy">Copyright &copy; 2004-<# ui_tpl_year #> <a href="http://www.zpanelcp.com/" target="_blank">ZPanel</a> v<# ui_tpl_zpanelversion #> - CstyleXv2 theme by <a href="http://www.auxio.eu/" target="_blank">Auxio</a></div>
