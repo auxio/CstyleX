@@ -200,7 +200,7 @@
 			<?php } ?>				 
 			</div>
 		</div>
-		<div id="copy">Copyright &copy; 2004-<?php echo date('Y'); ?> <a href="http://www.zpanelcp.com/" target="_blank">ZPanel</a> - CstyleXv2 theme by <a href="http://www.auxio.eu/" target="_blank">Auxio</a></div>
+		<div id="copy">Copyright &copy; 2004-<?php echo date('Y'); ?> <a href="http://www.zpanelcp.com/" target="_blank">ZPanel</a> - CstyleX theme by <a href="http://www.auxio.eu/" target="_blank">Auxio</a></div>
 		<!-- Please do not modify the Copyright, thank you . For more information please check: http://forums.zpanelcp.com/thread-6010.html -->
 	</body>
 </html>

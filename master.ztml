@@ -226,6 +226,10 @@
 							<td width="129" style="color: #000;"><# ui_tpl_zpanelversion #></td>
 						</tr>
 						<tr>
+							<td width="80"><: CstyleX Version :></td>
+							<td width="129" style="color: #000;">2.1.2</td>
+						</tr>
+						<tr>
 							<td width="80"><: Server uptime :></td>
 							<td width="129" style="color: #000;font-size:9px;"><# ui_tpl_serveruptime #></td>
 						</tr>
