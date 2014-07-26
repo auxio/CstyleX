@@ -1,8 +1,29 @@
 CstleXv2
 ============
 
-A ZpanelX theme inspired on cPanel®...
+#CstyleX Theme  
+
+* [Forums](http://forums.zpanelcp.com/Thread-CstyleX-10-0-2-CstyleXv2-10-1-0-A-ZpanelX-theme-inspired-on-cPanel%C2%AE?pid=49854#pid49854) for comments, discussion, more information and community support.
 
 
-See URL for more information!
-http://forums.zpanelcp.com/Thread-CstyleX-10-0-2-CstyleXv2-10-1-0-A-ZpanelX-theme-inspired-on-cPanel%C2%AE?pid=49854#pid49854
+##Description
+
+A cPanel® inspired theme for [ZPanel](http://www.zpanelcp.com/).
+
+##Author
+
+This theme is designed by Ron a.k.a. ron-e [@github](https://github.com/Ron-e) formally know as MathDerVakker [@github](https://github.com/MathDerVakker).
+
+Author's website: [Auxio.eu](http://auxio.eu/)
+
+##WARRANTY
+
+THE THEME IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT ANY WARRANTY. 
+IT IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. 
+THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE THEME IS WITH YOU. 
+SHOULD THE THEME PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW THE AUTHOR WILL BE LIABLE TO YOU FOR DAMAGES, 
+INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE THEME 
+(INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE THEME TO OPERATE WITH ANY OTHER PROGRAMS), 
+EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
