@@ -1,11 +1,14 @@
 #CstyleX Theme  
 
-* [Forums](http://forums.zpanelcp.com/Thread-CstyleX-10-0-2-CstyleXv2-10-1-0-A-ZpanelX-theme-inspired-on-cPanel%C2%AE?pid=49854#pid49854) for comments, discussion, more information and community support.
+The v3 is an ported version of an ported version of the the original version, so it is a mess but it works.
+It does not confirm to the new standardization policy and NO really NO support will be given for this theme!
+I made this ONLY to look if it s still possible to port this theme to Sentora v1.0.0 BETA and it can be done..
+The old CDNS manager still works and also has NO support and can be found at: https://github.com/auxio/cdns_manager
 
 
 ##Description
 
-A cPanel® inspired theme for [ZPanel](http://www.zpanelcp.com/).
+A cPanel® inspired theme for [Sentora](http://www.sentora.org/).
 
 ##Author
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>ZPanel &gt; <# ui_tpl_username #> - <# ui_tpl_domainname #></title>
+		<title>Sentora &gt; <# ui_tpl_username #> - <# ui_tpl_domainname #></title>
 		<link rel="icon" type="image/png" href="<# ui_tpl_assetfolderpath #>images/favicon.png">
 		<link href="<# ui_tpl_csspath #>" rel="stylesheet" type="text/css">
 		
@@ -51,11 +51,13 @@
 						vars[hash[0]] = hash[1];
 					}
 			}
+			
 			/* check is module is used */
 			if(vars['module']){
 				$(document).ready(function(){
 					/* Qtip http://craigsworks.com/projects/qtip/ */
 					$('a[title]').qtip();
+					$('.notice-manager-alert').removeClass('hidden');
 					/* hide sidebar #sub div*/
 					$('#sub').hide();
 					$("#maincontent").css({
@@ -76,8 +78,11 @@
 				$(document).ready(function() {
 					/* Qtip http://craigsworks.com/projects/qtip/ */
 					$('a[title]').qtip();
-				});					
+					$('.notice-manager-alert').removeClass('hidden');
+				});
+			
 			}
+			
 		</script>
 		<!-- End of CstyleX theme javascript -->
 	</head>
@@ -106,16 +111,16 @@
 							<th width="174">Notices</th>
 						</tr>
 						<tr>
-							<td><a href="./index.php" target="_blank" title="Homepage">Homepage</a></td>
+							<td><a href="./index.php" title="Homepage">Homepage</a></td>
 						</tr>
 						<tr>
-							<td><a href="http://zpanelcp.com/" target="_blank" title="ZpanelX">Zpanel</a></td>
+							<td><a href="http://sentora.org/" target="_blank" title="Sentora">Sentora</a></td>
 						</tr>
 						<tr>
-							<td><a href="http://forums.zpanelcp.com/" target="_blank" title="Zpanel Forums">Forums</a></td>
+							<td><a href="http://forums.sentora.org/" target="_blank" title="Sentora Forums">Forums</a></td>
 						</tr>
 						<tr>
-							<td><a href="http://docs.zpanelcp.com/" target="_blank" title="Zpanel documentation">Documentation</a></td>
+							<td><a href="http://docs.sentora.org/" target="_blank" title="Sentora documentation">Documentation</a></td>
 						</tr>
 					</table>
 					<table border="0" id="tablestyle2">
@@ -222,12 +227,16 @@
 							<td width="129" style="color: #000;"><# ui_tpl_mysqlversion #></td>
 						</tr>
 						<tr>
-							<td width="80"><: ZPanel Version :></td>
-							<td width="129" style="color: #000;"><# ui_tpl_zpanelversion #></td>
+							<td width="80"><: Sentora Version :></td>
+							<td width="129" style="color: #000;"><# ui_tpl_sentoraversion #></td>
 						</tr>
 						<tr>
-							<td width="80"><: CstyleX Version :></td>
-							<td width="129" style="color: #000;">2.1.2</td>
+							<td width="80"><: Theme Version :></td>
+							<td width="129" style="color: #000;">CstyleX</td>
+						</tr>
+						<tr>
+							<td width="80"><: Theme Version :></td>
+							<td width="129" style="color: #000;">3.0.0</td>
 						</tr>
 						<tr>
 							<td width="80"><: Server uptime :></td>
@@ -249,11 +258,11 @@
 					<# ui_tpl_modulelist2column #>
 					<# ui_tpl_module #>
 				</div>
-				<div id="footer"><a href="./index.php" title="<: Home :>"><: Home :></a> &bull; <a href="http://www.zpanelcp.com/" target="_blank">ZPanelX</a> &bull; <a href="http://forums.zpanelcp.com/" target="_blank">Forums</a> &bull; <a href="http://docs.zpanelcp.com/" target="_blank">documentation</a></div>
+				<div id="footer"><a href="./index.php" title="<: Home :>"><: Home :></a> &bull; <a href="http://www.sentora.org/" target="_blank">Sentora</a> &bull; <a href="http://forums.sentora.org/" target="_blank">Forums</a> &bull; <a href="http://docs.sentora.org/" target="_blank">documentation</a></div>
 			</div>
 		</div>
-		<div id="copy">Copyright &copy; 2004-<# ui_tpl_year #> <a href="http://www.zpanelcp.com/" target="_blank">ZPanel</a> v<# ui_tpl_zpanelversion #> - CstyleXv2 theme by <a href="http://www.auxio.eu/" target="_blank">Auxio</a></div>
-		<!-- Please do not modify the Copyright, thank you . For more information please check: http://forums.zpanelcp.com/thread-6010.html -->
+		<div id="copy">Copyright &copy; 2004-<# ui_tpl_year #> <a href="http://www.sentora.org/" target="_blank">Sentora</a> v<# ui_tpl_sentoraversion #> - CstyleXv3 theme by <a href="http://www.auxio.eu/" target="_blank">Auxio</a></div>
+		<!-- Please do not modify the Copyright, thank you! -->
 		<# ui_controllerdebug #>
 	</body>
 </html>
