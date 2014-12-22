@@ -1,9 +1,10 @@
 #CstyleX Theme  
 
-The v3 is an ported version of an ported version of the the original version, so it is a mess but it works.
-It does not confirm to the new standardization policy and NO really NO support will be given for this theme!
+The v3 is an ported version of an ported version of the the original version, so it is a mess but it works on my special Sentora development VPS.
+It does not confirm to the new standardization policy of Sentora and NO support will be given for this theme!
 I made this ONLY to look if it s still possible to port this theme to Sentora v1.0.0 BETA and it can be done..
 The old CDNS manager still works and also has NO support and can be found at: https://github.com/auxio/cdns_manager
+I strongly recommend not using this theme without further development!!!
 
 
 ##Description
