@@ -818,3 +818,27 @@ table th,td{
 .zform_wrapper{
 	max-width: 690px;
 }
+
+.btn {
+	margin: 5px 0 5px 5px;
+	color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd;
+	display: inline-block;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
