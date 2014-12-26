@@ -547,7 +547,8 @@ a.zannounce_a{
 	padding-bottom: 5px;
 }
 .close{
-	display:none
+	float:right;
+	margin: 0 0 3px 3px;
 }
 .zshadowbar{
     min-height:20px;

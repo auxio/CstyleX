@@ -57,7 +57,12 @@
 				$(document).ready(function(){
 					/* Qtip http://craigsworks.com/projects/qtip/ */
 					$('a[title]').qtip();
+					/* Notice alert hack */
 					$('.notice-manager-alert').removeClass('hidden');
+					$('button.close').click(function() {
+						$(this).closest('div').addClass('hidden');
+					});
+
 					/* hide sidebar #sub div*/
 					$('#sub').hide();
 					$("#maincontent").css({
@@ -72,17 +77,23 @@
 					$(".zmodule_content").css({
 						"background-color": "none"
 					});
+
 				});
 			/* else is no mudule is used */	
 			}else{
 				$(document).ready(function() {
 					/* Qtip http://craigsworks.com/projects/qtip/ */
 					$('a[title]').qtip();
+					/* Notice alert hack */
 					$('.notice-manager-alert').removeClass('hidden');
+					$('button.close').click(function() {
+						$(this).closest('div').addClass('hidden');
+					});
 				});
-			
+
 			}
-			
+
+
 		</script>
 		<!-- End of CstyleX theme javascript -->
 	</head>
