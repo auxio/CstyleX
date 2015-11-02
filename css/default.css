@@ -1,3 +1,12 @@
+/*
+Theme Name: CstyleX
+Theme URL: https://github.com/auxio/CstyleX
+Author: Ron-e / Auxio.eu
+Author URI: http://auxio.eu/
+Description: A cPanel® inspired theme for Sentora.
+Version:  3.0.1
+*/
+
 @import url("../inc/navbar/theme/start/jquery-ui-1.8.16.custom.css");
 @import url("../inc/navbar/fg.menu.css");
 @import url("../inc/jquery.qtip.min.css");
@@ -843,3 +852,5 @@ table th,td{
 	-ms-user-select: none;
 	user-select: none;
 }
+
+/* CstyleX 3.0.1 */
